@@ -1,0 +1,195 @@
+:root {
+    --primary-dark: #f15c6c;
+    --primary: #c26dab;
+    --secondary: #6666a4;
+    --trertiary: #78a1d1;
+  }
+  .navbar {
+    padding-left: 20px;
+    border-bottom: 1px solid #fff2;
+  }
+  .navbar-nav {
+    margin-left: auto;
+    padding-right: 20px;
+  }
+  .control-bar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-run {
+    border: none;
+    background: var(--primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    user-select: none;
+    transition: 0.1s;
+  }
+  .btn-run:hover {
+    background: var(--trertiary);
+  }
+  .btn-run:active {
+    background: var(--primary-dark);
+  }
+  
+  .btn-fun {
+    border: none;
+    background: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    user-select: none;
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+  .btn-fun:hover {
+    background: #fff1;
+  }
+  .btn-fun:active {
+    background: #fff2;
+  }
+  
+  .close-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    user-select: none;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  
+  .close-icon > img {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .close-icon:hover {
+    background: #fff1;
+  }
+  .close-icon:active {
+    background: #fff2;
+  }
+  .io-bar {
+    width: 100wh;
+    height: 24vh;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  .input-bar {
+    background: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    overflow-y: scroll;
+    overflow-x: wrap;
+    resize: none;
+    width: 90%;
+    height: 90%;
+    padding-right: 15px;
+  }
+  .output-bar {
+    position: absolute;
+    left: 50%;
+    width: 43%;
+  }
+  
+  input-bar:selection {
+    color: blue;
+  }
+  
+  .drop-down {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #ffff;
+    height: 40px;
+    width: fit-content;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    user-select: none;
+    transition: 0.2s;
+    margin-right: 10px;
+    outline: none;
+    font-size: 16px;
+    -webkit-appearance: none;
+    /*   for webkit browsers */
+    -moz-appearance: none;
+    /* for firefox */
+    appearance: none;
+    /*   for modern browsers */
+  }
+  
+  .drop-down:hover {
+    background: #fff1;
+  }
+  
+  .drop-down:active {
+    background: #fff2;
+  }
+  
+  .controller {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  
+  /* loadingBar */
+  
+  .dots {
+    width: 80%;
+    position: absolute;
+    text-align: center;
+    padding-top: 20px;
+    margin-right: 40px;
+  }
+  
+  .dots > div {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: #f15c6c;
+    border-radius: 100%;
+    display: inline-block;
+    animation: andydots 1.4s infinite ease-in-out both;
+  }
+  
+  .dots .dot1 {
+    animation-delay: -0.32s;
+  }
+  
+  .dots .dot2 {
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes andydots {
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+    }
+  }
+  
+  @keyframes andydots {
+    0%,
+    80%,
+    100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    40% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  /* loadingBar */
+  
