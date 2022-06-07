@@ -1,34 +1,31 @@
+import React from "react";
+import NavBar from "./NavBar";
+import IOBar from "./IOBar";
+import CodeBar from "./CodeBar";
+import ControlBar from "./ControlBar";
+import LoadingBar from "./LoadingBar";
+import useStore from "../useStore";
+import Head from "next/head";
+const Root = () => {
 
-class Root extends React.Component {
-    state = {
-        options: {
-            lineNumbers: true,
-            lineWrapping: true,
-            autofocus: false,
-            spellcheck: true,
-            fullScreen: false,
-            theme: "dracula",
-            mode: "javascript",
-            value: "function myScript(){\n\treturn 100;\n}\n"
-        },
-        hideLoad: false
-    };
-    render() {
-        return (
-            <>
-                <NavBar />
-                <ControlBar />
-                <CodeBar options={this.state.options} />
-                <IOBar>
-                    <LoadingBar hidden={this.state.hideLoad} />
-                </IOBar>
-                <button
-                    onClick={() => this.setState({ hideLoad: !this.state.hideLoad })}
-                >
-                    click me
-                </button>
-            </>
-        );
-    }
+    const isLoading = useStore(state => state.isLoading)
+    const setLoading = useStore(state => state.setLoading)
+
+    return (
+        <>
+        
+            <NavBar />
+            <ControlBar />
+            <CodeBar />
+            <IOBar>
+                <LoadingBar hidden={isLoading} />
+            </IOBar >
+            <button
+                onClick={() => setLoading(!isLoading)}
+            >
+                click me
+            </button>
+        </>
+    );
 }
 export default Root;  

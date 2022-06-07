@@ -1,10 +1,12 @@
-const DropDown = ({ arr }) => {
+import useStore from "../useStore";
+
+const DropDown = ({ arr, listener }) => {
     return (
         <>
-            <select className="bg-dark text-light drop-down">
+            <select className="bg-dark text-light drop-down" onChange={(e)=>listener(e.target.value)}>
                 {Object.keys(arr).map((key) => {
                     return (
-                        <option className="drop-down-item" value={key}>
+                        <option className="drop-down-item" key={key} value={key} >
                             {arr[key]}
                         </option>
                     );

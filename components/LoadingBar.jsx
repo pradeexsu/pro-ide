@@ -1,10 +1,11 @@
+import React from "react";
 class LoadingBar extends React.Component {
     render() {
       return (
-        <div class="dots" hidden={this.props.hidden}>
-          <div class="dot1"></div>
-          <div class="dot2"></div>
-          <div class="dot3"></div>
+        <div className="dots" hidden={this.props.hidden}>
+          <div className="dot1"></div>
+          <div className="dot2"></div>
+          <div className="dot3"></div>
         </div>
       );
     }
