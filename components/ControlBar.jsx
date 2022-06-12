@@ -48,6 +48,10 @@ const ControlBar = () => {
         coffeescript: "CoffeeScript",
         kotlin: "Kotlin"
     };
+
+    const navIcon =
+    "https://img.icons8.com/plasticine/100/000000/pandora-app.png";
+
     const setShowInput = useStore(state => state.setShowInput)
     const showInput = useStore(state => state.showInput)
     const setTheme = useStore(state => state.setTheme)
@@ -56,12 +60,24 @@ const ControlBar = () => {
     }
 
     return (
-        <div className="control-bar bg-dark text-light text-start">
-            <DropDown arr={lang}  listener={handleTheme}/>
+        <div className="control-bar bg-dark text-light text-start sticky-top">
+
+<a className="navbar-brand" href="#">
+                <img
+                    src={navIcon}
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="p-logo"
+                />
+            </a>
+
+
             <div className="text-end controller">
                 <Button iconUrl={ioIcon} text={"Input!"} listener={()=> setShowInput(!showInput)} />
                 <Button iconUrl={linkIcon} text={"Copy Link!"} />
-                <Button iconUrl={fullScreenIcon} />
+                {/* <Button iconUrl={fullScreenIcon} /> */}
+                <DropDown arr={lang}  listener={handleTheme}/>
                 <Button iconUrl={playIcon} text={"Run"} isPrimary />
             </div>
         </div>
